@@ -1,5 +1,6 @@
 
 # Arch Linux Hyprland Project
+![Alt Text](Screenshot_03-Mar_18-16-28_11039.png)
 ## ✨ Auto clone and install
 
 > [!CAUTION]

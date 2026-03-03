@@ -1,0 +1,231 @@
+* {
+  border: none;
+  border-radius: 0px;
+  font-family: "JetBrainsMono Nerd Font";
+  font-weight: bold;
+  font-size: 16px;
+  min-height: 10px;
+
+}
+
+/* 
+@define-color bar-bg #000000;
+
+@define-color main-bg #000000;
+@define-color main-fg #00ffff;
+
+@define-color wb-act-bg #00ffff;
+@define-color wb-act-fg #00ffff;
+
+@define-color wb-hvr-bg #ff0000;
+@define-color wb-hvr-fg #ff0000; */
+
+window#waybar {
+  background: rgba(0, 0, 0, 0.3);
+  border-bottom: 1px solid #00ffff;
+  border-radius: 0px;
+
+  padding-bottom: 0px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.5);
+
+  /* CRITICAL: Margin gives the shadow space to appear */
+  margin: 10px;
+
+
+}
+
+
+tooltip {
+  background: #000000;
+  color: #0000ff;
+  border-radius: 7px;
+  border-width: 0px;
+}
+
+#workspaces button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  margin-top: 1px;
+  margin-bottom: 4px;
+  border-radius: 4px;
+  margin-left: 0px;
+  padding-left: 2px;
+  padding-right: 2px;
+  margin-right: 0px;
+  color: #00ffff;
+  animation: ws_normal 20s ease-in-out 1;
+}
+
+#workspaces button.active {
+  color: #00ffff;
+  background: #000000;
+  box-shadow: none;
+  text-shadow: none;
+  animation: ws_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+  border-radius: 2px;
+  padding-right: 2px;
+  margin-right: 0px;
+  margin-left: 1px;
+}
+
+#workspaces button:hover {
+  color: #00ffff;
+  background-color: #000000;
+  border-radius: 1px;
+  box-shadow: none;
+  text-shadow: none;
+  padding-right: 2px;
+  animation: ws_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+  margin-right: 0px;
+  margin-left: 1px;
+}
+
+#taskbar button {
+  box-shadow: none;
+  text-shadow: none;
+  padding: 0px;
+  border-radius: 0px;
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-left: 0px;
+  padding-left: 0px;
+  padding-right: 0px;
+  margin-right: 0px;
+  color: #00ffff;
+  animation: tb_normal 20s ease-in-out 1;
+}
+
+#taskbar button.active {
+  background: #00ffff;
+  color: #00ffff;
+  margin-left: 2px;
+  padding-left: 11px;
+  padding-right: 11px;
+  margin-right: 2px;
+  animation: tb_active 20s ease-in-out 1;
+  transition: all 0.4s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#taskbar button:hover {
+  background: #00ffff;
+  color: #00ffff;
+  animation: tb_hover 20s ease-in-out 1;
+  transition: all 0.3s cubic-bezier(.55, -0.68, .48, 1.682);
+}
+
+#tray menu * {
+  min-height: 10px
+}
+
+#tray menu separator {
+  min-height: 10px
+}
+
+#temperature,
+#cpu,
+#backlight,
+#battery,
+#bluetooth,
+#custom-cava,
+#custom-cliphist,
+#clock,
+#custom-cpuinfo,
+#custom-github_hyprdots,
+#custom-gpuinfo,
+#idle_inhibitor,
+#custom-keybindhint,
+#custom-settings,
+#language,
+#memory,
+#mpris,
+#network,
+#custom-notifications,
+#custom-power,
+#privacy,
+#pulseaudio,
+#custom-spotify,
+#taskbar,
+#custom-theme,
+#tray,
+#custom-updates,
+#custom-wallchange,
+#custom-wbar,
+#window {
+  color: #00ffff;
+  opacity: 1;
+  margin: 0px 5px 0px 0px;
+  margin-bottom: 0px;
+  padding: 0px 10px 0px 10px;
+  border-bottom: 0px solid #00ffff;
+  border-top: 0px solid #00ffff;
+  border-right: 0px solid #00ffff;
+  border-left: 0px solid #00ffff;
+  border-radius: 0px;
+  margin-top: 0px;
+}
+
+
+/*------------------------------------------------------------------------*/
+#workspaces {
+  padding-left: 1px;
+  padding-right: 2px;
+}
+
+#taskbar {
+  padding: 1px;
+}
+
+#temperature:hover,
+#custom-cava:hover,
+#window:hover,
+#workspaces:hover,
+#cpu:hover,
+#battery:hover,
+#custom-settings:hover,
+#custom-cliphist:hover,
+#custom-updates:hover,
+#custom-notifications:hover,
+#taskbar:hover,
+#custom-cpuinfo:hover,
+#pulseaudio:hover,
+#custom-power:hover,
+#mpris:hover,
+#custom-keybindhint:hover,
+#network:hover,
+#tray:hover,
+#custom-gpuinfo:hover,
+#idle_inhibitor:hover,
+#backlight:hover,
+#clock:hover,
+#memory:hover {
+  color: #000000;
+  border-bottom: 0px solid #00ffff;
+  border-top: 0px solid #00ffff;
+  border-right: 0px solid #00ffff;
+  border-left: 0px solid #00ffff;
+}
+
+#custom-cliphist {
+  padding: 0px 9px 0px 7px;
+}
+
+#idle_inhibitor {
+  padding: 0px 9px 0px 7px;
+}
+
+#custom-power {
+  padding-left: 7px;
+  padding-right: 15px;
+  margin-right: 0px;
+}
+
+#cpu {
+  margin-left: 3px;
+}
+
+#pulseaudio {
+  padding: 0px 9px 0px 7px;
+}

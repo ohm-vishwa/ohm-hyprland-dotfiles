@@ -50,7 +50,7 @@ bindd = $mainMod CTRL, B, waybar styles menu, exec, $scriptsDir/WaybarStyles.sh
 bindd = $mainMod ALT, B, waybar layout menu, exec, $scriptsDir/WaybarLayout.sh
 ```
 
-## folder Structure
+## Folder Structure
 ```sh
 .
 ├── hypr

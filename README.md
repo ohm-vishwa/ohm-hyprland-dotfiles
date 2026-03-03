@@ -19,6 +19,7 @@ cd ~/
 mkdir -p src
 cd src
 git clone https://github.com/ohm-vishwa/ohm-hyprland-dotfiles
+cd ohm-hyprland-dotfiles
 mv ~/.config/hypr ~/.config/hypr.bak
 mv ~/.config/waybar ~/.config/waybar.bak
 cp -r hypr waybar ~/.config/
